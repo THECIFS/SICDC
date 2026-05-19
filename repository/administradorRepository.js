@@ -1,5 +1,5 @@
 import { pool } from '../config/postgres'
-import Administrador from '../model/administradorModel'
+import {Administrador} from '../model/administradorModel'
 
 const queryCreate = `
     INSERT INTO administradores (
