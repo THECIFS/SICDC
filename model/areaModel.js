@@ -1,5 +1,3 @@
-import { Administrador } from "./administradorModel"
-
 export class Area{
     #id
     #nombre
