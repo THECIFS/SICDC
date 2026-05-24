@@ -48,8 +48,8 @@ export const create = async (nombre, apellido_paterno, apellido_materno, telefon
         )
 }
 
-export const updateById = async (nombre, apellido_paterno, apellido_materno, telefono, correo, rol, rfc, id)=>{
-    const result = await pool.query (queryUpdateById, [nombre, apellido_paterno, apellido_materno, telefono, correo, rol, rfc, id])
+export const updateById = async (id, nombre, apellido_paterno, apellido_materno, telefono, correo, rol, rfc)=>{
+    const result = await pool.query (id, queryUpdateById, [nombre, apellido_paterno, apellido_materno, telefono, correo, rol, rfc])
     const row = result.rows[0]
         return new Usuario(
             row.id,

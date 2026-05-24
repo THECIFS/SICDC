@@ -43,8 +43,8 @@ export const create = async (id_usuario, id_cuenta, fecha_ingreso) =>{
     )
 }
 
-export const updateByIdUser = async (id_usuario) => {
-    const result = await pool.query (queryFindByIdUser, [id_usuario])
+export const updateDateByIdUser = async (id_usuario, fecha_ingreso) => {
+    const result = await pool.query (queryFindByIdUser, [id_usuario, fecha_ingreso])
     const row = result.rows [0]
     return new Voluntario (
         row.id_usuario,
